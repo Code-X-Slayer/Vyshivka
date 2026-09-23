@@ -1,1 +1,2475 @@
+html {
+    scroll-behavior: smooth;
+}
 
+:root {
+    --baby-pink: #FDEBF0;
+    --cream: #FFFAF0;
+    --pure-white: #FFFFFF;
+    --text-dark: #2C2424;
+    --theme-accent: #B5526B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(180deg, var(--baby-pink) 0%, var(--cream) 40%, var(--pure-white) 70%, var(--baby-pink) 100%);
+    background-size: 100% 300%; 
+    background-position: 0% 0%; 
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    transition: background-position 0.1s ease-out;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Increased to sit above everything, including the flying flower */
+    
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(181, 82, 107, 0.08);
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(181, 82, 107, 0.15);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    font-weight: 300;
+    color: var(--theme-accent);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 101; 
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px; /* INCREASED FROM 2px FOR CLARITY */
+    border-radius: 2px; /* Smooth edges */
+    background-color: var(--theme-accent); 
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--theme-accent);
+}
+
+/* --- Master Layout for Hero --- */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    min-height: 100vh;
+    padding-top: 80px; 
+}
+
+.hero-content {
+    margin-top: 18vh; 
+    margin-bottom: auto; 
+    text-align: center;
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0; /* PREVENTS VERTICAL SQUISHING */
+}
+
+.masked-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 14vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+    background-image: url('../assets/images/temp2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.05));
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #2e2a2a;
+    text-transform: uppercase;
+}
+
+/* --- Hero Showcase (Basket) --- */
+.hero-bottom-showcase {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 3rem; 
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0; /* PREVENTS VERTICAL SQUISHING */
+}
+
+.half-showcase-img {
+    width: 100%;
+    max-width: 700px; 
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: -5px; 
+}
+
+/* --- Scrolling Marquee Banner --- */
+.scrolling-marquee {
+    background-color: var(--theme-accent, #B5526B);
+    color: #ffffff;
+    padding: 1.2rem 0; 
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 11; 
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 3rem;
+    padding-right: 3rem;
+    animation: scroll-marquee 20s linear infinite;
+}
+
+.marquee-track span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- Decorative Icons (Desktop) --- */
+@keyframes snap-tilt {
+    0%, 49% { transform: rotate(-15deg); }
+    50%, 99% { transform: rotate(15deg); }
+    100% { transform: rotate(-15deg); }
+}
+
+.floating-icon {
+    position: absolute;
+    width: 60px; 
+    height: auto;
+    z-index: 5;
+    animation: snap-tilt 0.6s infinite;
+    transform-origin: center center;
+    opacity: 0.85; 
+    pointer-events: none;
+}
+
+#flying-flower {
+    position: absolute;
+    top: 12vh;
+    left: 6vw;
+    width: 60px;
+    z-index: 50; /* Lowered from 999 so it goes behind the navbar */
+    transform-origin: center center;
+    opacity: 0.85;
+    pointer-events: none;
+    animation: snap-tilt 0.6s infinite;
+    will-change: transform;
+}
+
+.icon-2  { top: 42%; left: 5%; animation-delay: -0.2s; }
+.icon-3  { top: 68%; left: 12%; animation-delay: -0.4s; }
+.icon-5  { top: 12%; left: 30%; animation-delay: -0.3s; }
+.icon-6  { top: 10%; right: 35%; animation-delay: -0.5s; }
+.icon-7  { top: 42%; right: 6%; animation-delay: -0.25s; }
+.icon-8  { top: 16%; right: 12%; animation-delay: -0.45s; }
+.icon-4  { top: 60%; left: 24%; animation-delay: -0.1s; }
+.icon-9  { top: 72%; right: 16%; animation-delay: -0.15s; }
+.icon-10 { top: 58%; right: 26%; animation-delay: -0.35s; }
+
+/* --- Feature Story Layout --- */
+#flower-destination {
+    width: 100%;
+    max-width: 700px; 
+    aspect-ratio: 3 / 4;
+    margin: 0 auto 0 -12rem;
+}
+
+.feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 5% 8rem; 
+    margin-top: 0; 
+}
+
+.feature-container {
+    max-width: 1350px; 
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr; 
+    gap: 0; 
+    align-items: center;
+}
+
+.feature-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4.5rem; 
+    margin-left: -8rem; 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(181, 82, 107, 0.06);
+    opacity: 0; 
+}
+
+.feature-tag { 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    color: #B5526B; 
+    font-weight: 500; 
+    margin-bottom: 1rem; 
+}
+
+.feature-text-content h2 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 3.6rem; 
+    font-weight: 700; 
+    color: #2C2424; 
+    line-height: 1.1; 
+    margin-bottom: 1.5rem; 
+}
+
+.feature-text-content p { 
+    font-size: 1.15rem; 
+    font-weight: 300; 
+    line-height: 1.8; 
+    color: #6A5A5A; 
+    margin-bottom: 2.5rem; 
+}
+
+.feature-link { 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 0.85rem; 
+    letter-spacing: 2px; 
+    font-weight: 500; 
+    color: #2C2424; 
+    transition: color 0.3s ease; 
+}
+
+.feature-link:hover { 
+    color: #B5526B; 
+}
+
+/* =========================================
+   MOBILE RESPONSIVE ADJUSTMENTS
+   ========================================= */
+@media screen and (max-width: 900px) {
+    /* --- Navbar Mobile --- */
+    .hamburger { display: flex; }
+    
+    .nav-links {
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%;
+        height: 100vh; 
+        flex-direction: column; 
+        align-items: center;
+        
+        /* Premium Heavy Frosted Glass */
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 100%);
+        backdrop-filter: blur(24px) saturate(200%);
+        -webkit-backdrop-filter: blur(24px) saturate(200%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 20px 40px rgba(181, 82, 107, 0.12);
+        
+        padding: 4rem 0; 
+        gap: 3rem;
+        transform: translateY(-20px); 
+        opacity: 0; 
+        visibility: hidden; 
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-links.active { 
+        transform: translateY(0); 
+        opacity: 1; 
+        visibility: visible; 
+        pointer-events: auto; 
+    }
+    
+    .nav-links a { font-weight: 500; font-size: 1rem; }
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .subtitle { font-size: 0.8rem; padding: 0 1rem; }
+
+    /* --- Fix Text & Hero Proportions --- */
+    .masked-text { font-size: 16vw; margin-bottom: 0.5rem; }
+    .hero-content { margin-top: 22vh; }
+
+    /* --- Prevent Basket Squeezing --- */
+    .half-showcase-img { 
+        max-width: 95%; 
+        height: auto !important; 
+        flex-shrink: 0; 
+    }
+
+    /* --- DRASTICALLY REDUCE MOBILE ICONS --- */
+    .floating-icon { 
+        width: 28px !important; 
+        transform: none !important;
+    }
+    #flying-flower { 
+        width: 32px !important; 
+        top: 12vh !important; 
+        left: 5vw !important; 
+    }
+
+    /* --- STRICT SAFE ZONES --- */
+    .icon-5  { top: 12%; left: 10%; }
+    .icon-6  { top: 10%; right: 12%; }
+    .icon-8  { top: 18%; right: 4%; }
+    
+    .icon-2  { top: auto; bottom: 25%; left: 5%; } 
+    .icon-7  { top: auto; bottom: 25%; right: 5%; } 
+    .icon-4  { top: auto; bottom: 32%; left: 15%; }
+    .icon-10 { top: auto; bottom: 35%; right: 18%; }
+    
+    .icon-3, .icon-9 { display: none; }
+
+    /* --- Feature Section Mobile --- */
+    #flower-destination { max-width: 320px; margin: 0 auto; }
+    .feature-section { padding: 4rem 5% 6rem; margin-top: 0; }
+    .feature-container { grid-template-columns: 1fr; gap: 4rem; }
+    .feature-text-content { margin-left: 0; padding: 2.5rem 1.5rem; align-items: center; text-align: center; }
+    .feature-text-content h2 { font-size: 2.5rem; }
+    .feature-text-content p { font-size: 1rem; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Bento Categories Section --- */
+.categories-section {
+    padding: 8rem 4% 6rem;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+.categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.categories-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.15;
+}
+
+.categories-header h2 span {
+    color: var(--theme-accent);
+    font-weight: 300;
+}
+
+.categories-header p {
+    font-size: 1rem;
+    color: #6A5A5A;
+    max-width: 320px;
+    font-weight: 300;
+}
+
+/* --- Master Bento Grid --- */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+/* Left Big Card */
+.bento-large {
+    background: linear-gradient(140deg, #FADCE3 0%, #FFFAF0 100%);
+    min-height: 540px;
+}
+
+/* Right Column Container */
+.bento-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Top Right Card */
+.bento-small {
+    min-height: 250px;
+}
+
+/* Bottom Split Row for Children & Accessories */
+.bento-split-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.bento-tiny {
+    min-height: 270px;
+    padding: 2rem;
+}
+
+.bento-tiny h3 {
+    font-size: 1.4rem !important;
+}
+
+.bento-tiny p {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* --- Card Common Styles --- */
+.bento-card {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 40px rgba(181, 82, 107, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2.5rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+/* Accent Card for Children's Section */
+.bento-color-accent {
+    background: linear-gradient(140deg, #B5526B 0%, #8E3D52 100%);
+    color: #ffffff;
+}
+
+.bento-color-accent h3, 
+.bento-color-accent p, 
+.bento-color-accent .bento-link {
+    color: #ffffff;
+}
+
+.bento-color-accent .bento-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* --- Image Rise & Zoom Effect --- */
+.bento-img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bento-img-wrapper img {
+    width: 65%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover .bento-img-wrapper img {
+    transform: scale(1.12) translateY(-10px);
+}
+
+.bento-card:hover {
+    box-shadow: 0 30px 60px rgba(181, 82, 107, 0.12);
+}
+
+/* --- Card Content Styling --- */
+.bento-content {
+    position: relative;
+    z-index: 2;
+    max-width: 240px;
+}
+
+.bento-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    background: rgba(181, 82, 107, 0.1);
+    color: var(--theme-accent);
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+}
+
+.bento-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+}
+
+.bento-card p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #6A5A5A;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.bento-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.bento-link:hover {
+    color: var(--theme-accent);
+}
+
+/* --- Responsive Layout for Mobile --- */
+@media screen and (max-width: 900px) {
+    .categories-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-large {
+        min-height: 380px;
+    }
+
+    .bento-split-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* --- Design Gallery Section --- */
+.gallery-section {
+    padding: 8rem 4% 8rem;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+.gallery-header {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: none;
+}
+
+.gallery-num {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--theme-accent);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.gallery-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.gallery-header p {
+    font-size: 1.1rem;
+    color: #6A5A5A;
+    font-weight: 300;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+/* --- Interactive Selector Grid --- */
+.gallery-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-tab-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 24px;
+    padding: 2rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 15px 35px rgba(181, 82, 107, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery-tab-card .tab-badge {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--theme-accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-tab-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.gallery-tab-card p {
+    font-size: 0.85rem;
+    color: #7A6A6A;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.gallery-tab-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--theme-accent);
+    box-shadow: 0 20px 40px rgba(181, 82, 107, 0.08);
+}
+
+.gallery-tab-card.active {
+    background: linear-gradient(135deg, #B5526B 0%, #8E3D52 100%);
+    border-color: transparent;
+    box-shadow: 0 20px 45px rgba(181, 82, 107, 0.2);
+}
+
+.gallery-tab-card.active .tab-badge,
+.gallery-tab-card.active h3,
+.gallery-tab-card.active p {
+    color: #ffffff;
+}
+
+/* Special Action Cards Styling */
+.gallery-action-card, .gallery-custom-card {
+    background: linear-gradient(135deg, rgba(181, 82, 107, 0.08) 0%, rgba(255, 250, 240, 0.5) 100%);
+    border: 1px dashed var(--theme-accent);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery-action-card:hover, .gallery-custom-card:hover {
+    background: linear-gradient(135deg, rgba(181, 82, 107, 0.15) 0%, rgba(255, 250, 240, 0.8) 100%);
+}
+
+.action-arrow {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--theme-accent);
+    transition: transform 0.3s ease;
+}
+
+.gallery-action-card:hover .action-arrow, 
+.gallery-custom-card:hover .action-arrow {
+    transform: translateX(5px);
+}
+
+/* --- Right Side Live Preview Canvas --- */
+.gallery-preview-canvas {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 32px;
+    padding: 3rem;
+    box-shadow: 0 30px 60px rgba(181, 82, 107, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.preview-img-box {
+    width: 100%;
+    height: 320px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #FADCE3 0%, #FFFAF0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.preview-img-box img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-preview-canvas:hover .preview-img-box img {
+    transform: scale(1.12);
+}
+
+.preview-text-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin: 0.6rem 0;
+}
+
+.preview-text-box p {
+    font-size: 1rem;
+    color: #6A5A5A;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+
+
+/* --- Ultra-Compact Mobile Gallery Optimization --- */
+@media screen and (max-width: 900px) {
+    .gallery-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Preview Canvas stays at the top for instant visual feedback */
+    .gallery-preview-canvas {
+        order: -1; 
+        padding: 1.5rem 1rem;
+    }
+
+    .preview-img-box {
+        height: 180px;
+        margin-bottom: 1rem;
+    }
+
+    .preview-text-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .preview-text-box p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    /* --- COMPACT 3-COLUMN OR SNUG 2-COLUMN GRID FOR ALL 6 CARDS --- */
+    .gallery-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 snug columns so all 6 cards fit nicely */
+        gap: 0.75rem;
+    }
+
+    .gallery-tab-card {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+        padding: 1rem 0.8rem;
+        min-height: 85px; /* Reduced height so they don't take up much space */
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Hide descriptions entirely on mobile cards to keep them tight and focused on titles */
+    .gallery-tab-card p {
+        display: none; 
+    }
+
+    .gallery-tab-card .tab-badge {
+        font-size: 0.55rem;
+        margin-bottom: 0.2rem;
+        letter-spacing: 1px;
+    }
+
+    .gallery-tab-card h3 {
+        font-size: 0.85rem; /* Clean title scale for mobile */
+        line-height: 1.2;
+    }
+
+    /* Action & Custom Cards (Cards 5 & 6) */
+    .gallery-action-card, .gallery-custom-card {
+        grid-column: span 2; /* Make them span across the bottom row cleanly */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.2rem;
+        min-height: auto;
+    }
+
+    .gallery-action-card h3, .gallery-custom-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .gallery-action-card p, .gallery-custom-card p {
+        display: none; /* Keep action cards minimal too */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Metric Counter Bar Section --- */
+.metrics-section {
+    background: linear-gradient(135deg, #3D1520 0%, #220A11 100%);
+    padding: 5rem 4%;
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Metrics Section --- */
+.metrics-container {
+    max-width: 1550px;
+    margin: 0 auto 50rem auto; /* Increased spacing between metrics and comments section */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.metric-item {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.metric-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #FFFAF0;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: rgba(250, 240, 240, 0.7);
+    font-weight: 400;
+}
+
+.metric-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    .metrics-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .metric-divider {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* --- Unified Dark Trust Zone (With #ad2e50 Rose-Wine Gradient) --- */
+.dark-trust-zone {
+    background: #ad2e50; /* Changed from gradient to solid uniform color */
+    padding: 9rem 4%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Metrics Section with Clean Spacing & Layering --- */
+.metrics-container {
+    max-width: 1200px;
+    margin: 0 auto 16rem auto !important; /* Generous space between metrics and Instagram comments */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    z-index: 2; /* Ensures numbers sit cleanly on top of the background */
+}
+
+.metric-item {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.metric-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #FFFAF0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: rgba(255, 250, 240, 0.75);
+}
+
+.metric-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 250, 240, 0.2);
+}
+
+
+/* --- Instagram Feed Testimonials Section --- */
+.testimonials-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.testimonials-header {
+    margin-bottom: 4rem;
+}
+
+.testimonials-num {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #d7dbc4;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.testimonials-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #FFFAF0;
+}
+
+/* 3-Card Carousel Stage */
+.insta-slider-wrapper {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.insta-track {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Larger, Styled Instagram Post Cards */
+.insta-card {
+    position: absolute;
+    width: 360px;
+    background: #FAFAFA;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0.3;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+/* Center Active Card */
+.insta-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1.08);
+    z-index: 3;
+    pointer-events: auto;
+    filter: blur(0);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* Left Peeking Card */
+.insta-card.prev-card {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateX(-340px) scale(0.9);
+    z-index: 2;
+    pointer-events: auto;
+    filter: blur(1px);
+}
+
+/* Right Peeking Card */
+.insta-card.next-card {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateX(340px) scale(0.9);
+    z-index: 2;
+    pointer-events: auto;
+    filter: blur(1px);
+}
+
+/* Instagram Post Header */
+.insta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.insta-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.insta-avatar {
+    width: 42px;
+    height: 42px;
+    background: #3D1520;
+    color: #FFFAF0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.insta-name {
+    display: block;
+    font-weight: 600;
+    color: #262626;
+    font-size: 0.95rem;
+}
+
+.insta-loc {
+    display: block;
+    font-size: 0.75rem;
+    color: #8E8E8E;
+}
+
+.insta-dots {
+    color: #8E8E8E;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Instagram Body Caption */
+.insta-body {
+    padding: 2rem 1.5rem;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+}
+
+.insta-caption {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #262626;
+    font-weight: 400;
+}
+
+/* Instagram Actions Bar */
+.insta-actions {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #262626;
+}
+
+.insta-action-icons {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.insta-likes {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Navigation Arrows */
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.testi-arrow.dark-arrow {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 250, 240, 0.05);
+    border: 1px solid rgba(255, 250, 240, 0.2);
+    color: #FFFAF0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.testi-arrow.dark-arrow:hover {
+    background: #fbfbfb;
+    color: #1B1214;
+    border-color: #fffefd;
+    transform: scale(1.05);
+}
+
+/* --- Responsive Adjustments for Mobile Carousel --- */
+@media screen and (max-width: 900px) {
+    .insta-track {
+        height: 380px;
+        overflow: hidden; /* Contains the cards cleanly */
+    }
+
+    /* Reset side cards on mobile so they don't overflow the screen */
+    .insta-card {
+        width: 85vw; /* Takes up most of the mobile screen width */
+        max-width: 340px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.9) translateY(20px);
+        filter: none; /* Clear blur on mobile */
+    }
+
+    .insta-card.prev-card {
+        transform: translateX(-120%) scale(0.85);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .insta-card.next-card {
+        transform: translateX(120%) scale(0.85);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Active card sits dead-center on mobile */
+    .insta-card.active {
+        transform: translateX(-50%) scale(1) translateY(0);
+        opacity: 1;
+        visibility: visible;
+        filter: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Paper-Receipt Billing Section (Solid Uniform Color & Fixed Edges) --- */
+.receipt-section.dark-receipt-zone {
+    background: #ad2e50; /* Matches the solid uniform color */
+    padding: 9rem 4%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.receipt-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+/* Left Content Side */
+.receipt-content-side {
+    flex: 1;
+    min-width: 320px;
+    max-width: 550px;
+}
+
+.receipt-content-side .receipt-tagline {
+    color: #FADCE3;
+}
+
+.receipt-content-side h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #FFFAF0;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.receipt-content-side p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 250, 240, 0.75);
+    margin-bottom: 2.5rem;
+}
+
+.receipt-btn-group {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary-atelier.dark-btn {
+    background: #FFFAF0;
+    color: #3D1520;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-atelier.dark-btn:hover {
+    background: #D4AF37;
+    color: #1B1214;
+    transform: translateY(-2px);
+}
+
+.btn-secondary-atelier.dark-btn-sec {
+    background: transparent;
+    color: #FFFAF0;
+    border: 1px solid rgba(255, 250, 240, 0.3);
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-atelier.dark-btn-sec:hover {
+    border-color: #FFFAF0;
+    background: rgba(255, 250, 240, 0.08);
+}
+
+/* Right Side: Dark Vintage Paper-Receipt Card */
+.paper-receipt-card.dark-paper-card {
+    background: #FFFAF0; /* Retaining the crisp paper receipt look for readability */
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+}
+
+/* Serrated top & bottom edge effect matched precisely to the solid #ad2e50 background */
+.paper-receipt-card.dark-paper-card::before,
+.paper-receipt-card.dark-paper-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: radial-gradient(circle, transparent, transparent 50%, #ad2e50 50%, #ad2e50 100%);
+    background-size: 16px 16px;
+}
+
+.paper-receipt-card.dark-paper-card::before {
+    top: -10px;
+}
+
+.paper-receipt-card.dark-paper-card::after {
+    bottom: -10px;
+    transform: rotate(180deg);
+}
+
+.receipt-header-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.receipt-logo-title h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2D1E21;
+    letter-spacing: -0.5px;
+}
+
+.receipt-logo-title span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8C7B7D;
+}
+
+.receipt-emblem {
+    font-size: 1.5rem;
+    background: #FADCE3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-divider-line {
+    width: 100%;
+    height: 1px;
+    background: #E5D9D9;
+    margin: 1.2rem 0;
+}
+
+.receipt-divider-line.dashed {
+    border-top: 1px dashed #C5B5B5;
+    background: transparent;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.9rem 0;
+    font-size: 0.95rem;
+}
+
+.r-label {
+    color: #6A5A5A;
+}
+
+/* --- Fix Long Name Overflow on Receipt Card --- */
+.receipt-row .r-value {
+    max-width: 220px;          /* Restricts width so it stays inside the receipt */
+    word-break: break-word;    /* Breaks long continuous words */
+    overflow-wrap: break-word; /* Ensures wrapping compatibility */
+    text-align: right;         /* Keeps the alignment neat */
+}
+
+.r-value {
+    font-weight: 600;
+    color: #2D1E21;
+}
+
+.receipt-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.2rem 0 1.5rem;
+}
+
+.total-text {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #2D1E21;
+}
+
+.total-value {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #ad2e50;
+}
+
+/* Barcode Simulation */
+.receipt-barcode-box {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.barcode-lines {
+    height: 40px;
+    width: 85%;
+    margin: 0 auto 0.8rem;
+    background: repeating-linear-gradient(
+        90deg,
+        #2D1E21,
+        #2D1E21 2px,
+        transparent 2px,
+        transparent 5px,
+        #2D1E21 5px,
+        #2D1E21 8px,
+        transparent 8px,
+        transparent 10px
+    );
+}
+
+.receipt-thankyou {
+    font-size: 0.8rem;
+    color: #ad2e50;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .receipt-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .receipt-content-side h2 {
+        font-size: 2.4rem;
+    }
+}
+
+
+/* --- Clean Atelier Workbench Styles (No Box Container) --- */
+.atelier-custom-workbench {
+    margin-top: 2rem;
+}
+
+.workbench-group {
+    margin-bottom: 1.8rem;
+}
+
+.workbench-group label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 250, 240, 0.7);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+/* Option Pill Grid Layout */
+.option-pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Minimal Atelier Pills */
+.atelier-pill {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFAF0;
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.atelier-pill:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Active State for Pills */
+.atelier-pill.active {
+    background: #FFFAF0;
+    color: #3D1520;
+    border-color: #FFFAF0;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Size Pills specific adjustment */
+.size-options-group {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.size-pill {
+    flex: 1;
+    text-align: center;
+}
+
+/* Inline Clean Text Input */
+.atelier-inline-input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #FFFAF0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.atelier-inline-input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #FFFAF0;
+    box-shadow: 0 0 15px rgba(255, 250, 240, 0.15);
+}
+
+.atelier-inline-input::placeholder {
+    color: rgba(255, 250, 240, 0.4);
+}
+
+
+/* --- Bespoke Clean Dropdown Styling --- */
+.atelier-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.atelier-select-wrapper::after {
+    content: '↓';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 250, 240, 0.6);
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+.atelier-dropdown {
+    width: 100%;
+    padding: 0.9rem 1.4rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #FFFAF0;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.atelier-dropdown:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.atelier-dropdown:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #FFFAF0;
+    box-shadow: 0 0 15px rgba(255, 250, 240, 0.15);
+}
+
+/* Style options inside dropdown for dark theme readability */
+.atelier-dropdown option {
+    background: #3D1520;
+    color: #FFFAF0;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Consultation & Contact Form Section (Normal Light Background) --- */
+.consultation-section {
+    background: #F9F6F0; /* Normal warm organic cream atelier background */
+    padding: 9rem 4%;
+    position: relative;
+    border-bottom: 1px solid rgba(173, 46, 80, 0.1);
+}
+
+.consultation-container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.consultation-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.consultation-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ad2e50;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.consultation-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2D1E21;
+    margin-bottom: 1rem;
+}
+
+.consultation-header p {
+    font-size: 1.05rem;
+    color: #6A5A5A;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+/* --- Consultation Form Container with Brand Color Glow --- */
+.consultation-form {
+    background: #FFFAF0;
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(173, 46, 80, 0.15);
+    box-shadow: 0 25px 50px rgba(173, 46, 80, 0.22); /* Rich, luxurious #ad2e50 tinted shadow */
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field.full-width {
+    grid-column: span 2;
+    margin-bottom: 1.5rem;
+}
+
+.form-field label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #6A5A5A;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 0.9rem 1.2rem;
+    background: #F9F6F0;
+    border: 1px solid rgba(173, 46, 80, 0.2);
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #2D1E21;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Compact textarea height */
+.form-field textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #ad2e50;
+    background: #FFFAF0;
+    box-shadow: 0 0 10px rgba(173, 46, 80, 0.15);
+}
+
+.form-submit-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-top: 1px solid #E5D9D9;
+    padding-top: 2rem;
+}
+
+.btn-consult-submit {
+    background: #ad2e50;
+    color: #FFFAF0;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(173, 46, 80, 0.25);
+}
+
+.btn-consult-submit:hover {
+    background: #68172c;
+    transform: translateY(-2px);
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: #8C7B7D;
+}
+
+/* Responsive adjustments for mobile form */
+@media screen and (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-field.full-width {
+        grid-column: span 1;
+    }
+    .consultation-form {
+        padding: 1.5rem;
+    }
+    .form-submit-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* --- Asymmetric Bento Footer Section --- */
+.bento-footer-section {
+    background: #F9F6F0; /* Normal warm cream atelier background */
+    padding: 8rem 4%;
+    position: relative;
+    border-top: 1px solid rgba(173, 46, 80, 0.1);
+}
+
+.bento-footer-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 280px;
+    gap: 1.5rem;
+}
+
+/* Base Bento Footer Card */
+/* --- Ensure Tall Image Card Fills Completely --- */
+.bento-footer-card {
+    background: #FFFAF0;
+    border-radius: 24px;
+    border: 1px solid rgba(173, 46, 80, 0.12);
+    box-shadow: 0 15px 35px rgba(173, 46, 80, 0.08);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.8rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.bento-footer-card:hover {
+    box-shadow: 0 25px 50px rgba(173, 46, 80, 0.18);
+}
+
+/* Image Cards inside Bento */
+.bento-footer-card .footer-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bento-footer-card .footer-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.bento-footer-card:hover .footer-card-img img {
+    transform: scale(1.05);
+}
+
+.footer-card-caption {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 250, 240, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 1rem 1.2rem;
+    border-radius: 14px;
+    margin-top: auto;
+    border: 1px solid rgba(173, 46, 80, 0.1);
+}
+
+.footer-card-caption span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ad2e50;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.footer-card-caption h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: #2D1E21;
+    font-weight: 700;
+}
+
+/* Info Card Style */
+.bento-footer-card.info-card {
+    background: #FFFAF0;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-icon {
+    font-size: 2rem;
+    background: #FADCE3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-subtitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ad2e50;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.bento-footer-card.info-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #2D1E21;
+    margin-bottom: 0.3rem;
+}
+
+.bento-footer-card.info-card p {
+    font-size: 0.9rem;
+    color: #6A5A5A;
+}
+
+/* Address Card Style (Brand Accent) */
+.bento-footer-card.address-card {
+    background: #ad2e50;
+    color: #FFFAF0;
+    justify-content: flex-end;
+}
+
+.address-content .badge-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FADCE3;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.address-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #FFFAF0;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.address-link {
+    color: #FFFAF0;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.4);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.address-link:hover {
+    border-color: #FFFAF0;
+    padding-left: 5px;
+}
+
+/* Brand Card Style */
+.bento-footer-card.brand-card {
+    justify-content: space-between;
+}
+
+.brand-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.brand-footer-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-footer-logo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2D1E21;
+}
+
+.brand-footer-logo h3 span {
+    color: #ad2e50;
+}
+
+.brand-card p {
+    font-size: 0.95rem;
+    color: #6A5A5A;
+    line-height: 1.5;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-socials a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ad2e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #2D1E21;
+}
+
+/* Responsive Grid Adjustments */
+@media screen and (max-width: 900px) {
+    .bento-footer-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    .bento-footer-card {
+        min-height: 320px;
+    }
+    .bento-footer-card[style*="grid-row"] {
+        grid-row: span 1 !important;
+    }
+}
+
+
+
+/* --- Tall Logo Signature Card Styles --- */
+.bento-footer-card.logo-signature-card {
+    background: #FFFAF0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.card-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-official-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(173, 46, 80, 0.2);
+    box-shadow: 0 8px 20px rgba(173, 46, 80, 0.15);
+}
+
+.card-logo-container h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #2D1E21;
+    font-weight: 700;
+}
+
+.card-logo-container h3 span {
+    color: #ad2e50;
+}
+
+.logo-signature-card .footer-card-caption {
+    width: 100%;
+    text-align: left;
+}
+
+
+
+/* --- Standard Full-Fill Image Styling for Bento Cards --- */
+.bento-footer-card .footer-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bento-footer-card .footer-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* --- Official Tall Logo Showcase Card --- */
+.bento-footer-card.logo-showcase-card {
+    background: #FFFAF0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.8rem;
+}
+
+.logo-showcase-frame {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    border-radius: 180px; /* Smooth rounded corners */
+    overflow: hidden;
+    margin: auto 0;
+    box-shadow: 0 15px 35px rgba(173, 46, 80, 0.15);
+    border: 1px solid rgba(173, 46, 80, 0.2);
+    background: #FFFAF0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-showcase-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fills the rounded frame cleanly */
+    border-radius: 24px;
+}
+
+.logo-showcase-card .footer-card-caption {
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+}
+
+
+
+/* --- Mobile Responsive Fixes for Bento Footer & Logo Card --- */
+@media screen and (max-width: 900px) {
+    .bento-footer-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 1.2rem;
+    }
+
+    .bento-footer-card {
+        min-height: 280px;
+        grid-row: span 1 !important; /* Resets any desktop row spanning on mobile */
+    }
+
+    /* Scale down logo showcase card specifically for mobile */
+    .bento-footer-card.logo-showcase-card {
+        padding: 1.5rem 1.2rem;
+        min-height: 320px;
+    }
+
+    .logo-showcase-frame {
+        height: 250px; /* Reduced height for mobile screens */
+        border-radius: 200px; /* Scaled-down rounded corners for mobile */
+        max-width: 70%;
+    }
+}
+
+
+
+/* --- Final Dark Atelier Footer Styles --- */
+.final-dark-footer {
+    background: #220A11; /* Deep, uniform dark wine background */
+    color: #FFFAF0;
+    padding: 6rem 4% 4rem 4%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner-container {
+    max-width: 1575px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+/* Left Brand Info */
+.footer-brand-col {
+    max-width: 320px;
+}
+
+.footer-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 250, 240, 0.2);
+}
+
+.footer-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFFAF0;
+}
+
+.footer-brand-name span {
+    color: #FFFAF0; /* Gold accent */
+}
+
+.footer-hours {
+    font-size: 0.95rem;
+    color: #FADCE3;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 250, 240, 0.5);
+    margin-bottom: 0.6rem;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-legal-links a {
+    font-size: 0.85rem;
+    color: rgba(255, 250, 240, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    color: #FFFAF0;
+}
+
+.footer-powered {
+    font-size: 0.8rem;
+    color: #FFFAF0;
+    font-weight: 500;
+}
+
+/* Right Links Grid */
+.footer-links-grid {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFFAF0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul li a {
+    color: rgba(255, 250, 240, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #FFFAF0;
+    padding-left: 4px;
+}
+
+.contact-col .footer-address,
+.contact-col .footer-email {
+    font-size: 0.95rem;
+    color: rgba(255, 250, 240, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: normal;
+}
+
+/* Responsive Footer Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-inner-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .footer-links-grid {
+        gap: 3rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+/* --- Floating Custom WhatsApp Quick-Chat Widget --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(173, 46, 80, 0.35);
+    background: #ad2e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 30px rgba(173, 46, 80, 0.5);
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(173, 46, 80, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(173, 46, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(173, 46, 80, 0);
+    }
+}
+
+
+
+
+
+
+/* --- Make Shop Pagination Horizontally Scrollable on Mobile --- */
+.shop-page .pagination, 
+.shop-page .shop-pagination, 
+.shop-page [class*="pagination"] {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding: 15px 4%;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hide scrollbar for a clean mobile app look */
+.shop-page .pagination::-webkit-scrollbar, 
+.shop-page .shop-pagination::-webkit-scrollbar, 
+.shop-page [class*="pagination"]::-webkit-scrollbar {
+    display: none;
+}
