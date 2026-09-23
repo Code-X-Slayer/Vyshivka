@@ -1,1 +1,26 @@
-
+[
+  {
+    "id": 1,
+    "handle": "ananya.bespoke",
+    "location": "Rajahmundry Atelier",
+    "initials": "AS",
+    "caption": "\"Every single stitch feels like a piece of art. The custom floral jacket exceeded my expectations completely—warm, elegant, and exceptionally crafted.\" 🧵✨",
+    "likes": "142 likes"
+  },
+  {
+    "id": 2,
+    "handle": "karthik_varma",
+    "location": "Hyderabad",
+    "initials": "KV",
+    "caption": "\"Finding true hand-embroidery with this level of organic detail is rare. The vintage motifs on my heritage piece bring so much soul and depth.\" 🌿",
+    "likes": "98 likes"
+  },
+  {
+    "id": 3,
+    "handle": "priya.threads",
+    "location": "Visakhapatnam",
+    "initials": "PR",
+    "caption": "\"The entire experience—from choosing the butterfly pattern to the final delivery—was seamless. Absolute masterclass in traditional tailoring.\" 🦋",
+    "likes": "215 likes"
+  }
+]

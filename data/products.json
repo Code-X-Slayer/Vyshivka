@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "title": "Heritage Silk Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "floral",
+    "price": 1499,
+    "image": "assets/images/products/img1.png",
+    "description": "Personalised hand-stitched floral motifs on 100% pure silk shirt."
+  },
+  {
+    "id": 2,
+    "title": "Botanical Wrap Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "leaves",
+    "price": 1899,
+    "image": "assets/images/products/img2.png",
+    "description": "Trailing botanical leaves and vines woven with organic silk threads."
+  },
+  {
+    "id": 3,
+    "title": "Classic Heritage Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "peacock",
+    "price": 1699,
+    "image": "assets/images/products/img3.png",
+    "description": "Traditional Zari geometric patterns paired with classic silhouettes."
+  },
+  {
+    "id": 4,
+    "title": "Signature Floral Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "floral",
+    "price": 2499,
+    "image": "assets/images/products/img4.png",
+    "description": "Structured layering piece featuring dense hand-embroidered rose clusters."
+  },
+  {
+    "id": 5,
+    "title": "Whimsical Kids Cotton Top",
+    "category": "children",
+    "garment": "shirt",
+    "motif": "butterflies",
+    "price": 999,
+    "image": "assets/images/products/img5.png",
+    "description": "Soft organic cotton featuring light, playful butterfly motifs."
+  },
+  {
+    "id": 6,
+    "title": "Embroidered Accent Tote",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "custom",
+    "price": 799,
+    "image": "assets/images/products/img6.png",
+    "description": "Hand-finished fabric accessory featuring custom monogram initials."
+  },
+  {
+    "id": 7,
+    "title": "Royal Peacock Silk Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "peacock",
+    "price": 1799,
+    "image": "assets/images/products/img7.png",
+    "description": "Sophisticated men's silk shirt adorned with subtle regal peacock feather accents."
+  },
+  {
+    "id": 8,
+    "title": "Zari Geometric Festive Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "peacock",
+    "price": 3499,
+    "image": "assets/images/products/img8.png",
+    "description": "Exquisite festive lehenga featuring traditional zari geometric line work."
+  },
+  {
+    "id": 9,
+    "title": "Butterfly Garden Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "butterflies",
+    "price": 1299,
+    "image": "assets/images/products/img9.png",
+    "description": "Delicate sari blouse embellished with whimsical flying butterflies and metallic thread."
+  },
+  {
+    "id": 10,
+    "title": "Botanical Vine Men's Tee",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "leaves",
+    "price": 1199,
+    "image": "assets/images/products/img10.png",
+    "description": "Casual organic cotton tee featuring minimalist trailing vine embroidery along the chest."
+  },
+  {
+    "id": 11,
+    "title": "Rose Bloom Designer Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "floral",
+    "price": 1899,
+    "image": "assets/images/products/img11.png",
+    "description": "Elegantly tailored kurti showcasing rich, full-bloom crimson rose embroidery."
+  },
+  {
+    "id": 12,
+    "title": "Monogram Initial Pocket Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "custom",
+    "price": 1399,
+    "image": "assets/images/products/img12.png",
+    "description": "Customized men's everyday button-down featuring fine personal initial embroidery on the pocket."
+  },
+  {
+    "id": 13,
+    "title": "Meadow Floral Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "floral",
+    "price": 2199,
+    "image": "assets/images/products/img13.png",
+    "description": "Flowing silk skirt embroidered with a vibrant meadow of wild spring blossoms."
+  },
+  {
+    "id": 14,
+    "title": "Kids Festive Kurta Set",
+    "category": "children",
+    "garment": "kurti",
+    "motif": "floral",
+    "price": 1299,
+    "image": "assets/images/products/img14.png",
+    "description": "Adorable children's festive kurta crafted with soft cotton and playful floral embroidery."
+  },
+  {
+    "id": 15,
+    "title": "Embroidered Silk Stole",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "leaves",
+    "price": 899,
+    "image": "assets/images/products/img15.png",
+    "description": "Luxurious pure silk stole finished with delicate trailing leaf borders."
+  },
+  {
+    "id": 16,
+    "title": "Zari Monogram Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "custom",
+    "price": 2799,
+    "image": "assets/images/products/img16.png",
+    "description": "Statement layering jacket featuring custom monogram crests in traditional zari yarn."
+  },
+  {
+    "id": 17,
+    "title": "Vine Motif Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "leaves",
+    "price": 1399,
+    "image": "assets/images/products/img17.png",
+    "description": "Sari blouse featuring intricate evergreen vine embroidery along the sleeves and back."
+  },
+  {
+    "id": 18,
+    "title": "Classic Blossom Kids Frock",
+    "category": "children",
+    "garment": "skirt",
+    "motif": "floral",
+    "price": 1099,
+    "image": "assets/images/products/img1.png",
+    "description": "Charming child's cotton frock sprinkled with tiny hand-stitched floral buds."
+  },
+  {
+    "id": 19,
+    "title": "Geometric Zari Men's Kurta",
+    "category": "men",
+    "garment": "kurti",
+    "motif": "peacock",
+    "price": 1999,
+    "image": "assets/images/products/img2.png",
+    "description": "Festive men's ethnic tunic with structured geometric zari thread embroidery."
+  },
+  {
+    "id": 20,
+    "title": "Butterfly Embellished Cap",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "butterflies",
+    "price": 699,
+    "image": "assets/images/products/img3.png",
+    "description": "Casual fabric cap highlighted with a dainty embroidered butterfly motif."
+  },
+  {
+    "id": 21,
+    "title": "Summer Bloom Silk Shirt",
+    "category": "women",
+    "garment": "shirt",
+    "motif": "floral",
+    "price": 1599,
+    "image": "assets/images/products/img4.png",
+    "description": "Lightweight silk shirt featuring airy summer floral arrangements."
+  },
+  {
+    "id": 22,
+    "title": "Royal Peacock Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "peacock",
+    "price": 2899,
+    "image": "assets/images/products/img5.png",
+    "description": "Dramatic flared skirt featuring hand-embroidered peacock motif panels."
+  },
+  {
+    "id": 23,
+    "title": "Minimalist Leaf Men's Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "leaves",
+    "price": 1499,
+    "image": "assets/images/products/img6.png",
+    "description": "Clean-cut white silk shirt featuring a single sprig of stitched olive leaves."
+  },
+  {
+    "id": 24,
+    "title": "Whimsical Butterfly Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "butterflies",
+    "price": 1799,
+    "image": "assets/images/products/img7.png",
+    "description": "Graceful everyday kurti accented with flying butterfly motifs on the neckline."
+  },
+  {
+    "id": 25,
+    "title": "Custom Family Crest Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "custom",
+    "price": 1599,
+    "image": "assets/images/products/img8.png",
+    "description": "Bespoke sari blouse tailored with custom initial crest embroidery on the cuff."
+  },
+  {
+    "id": 26,
+    "title": "Floral Garden Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "floral",
+    "price": 3699,
+    "image": "assets/images/products/img9.png",
+    "description": "Grand bridal-style lehenga completely covered in multi-hued floral threadwork."
+  },
+  {
+    "id": 27,
+    "title": "Kids Butterfly Denim Jacket",
+    "category": "children",
+    "garment": "jacket",
+    "motif": "butterflies",
+    "price": 1499,
+    "image": "assets/images/products/img10.png",
+    "description": "Stylish children's outerwear featuring colorful stitched butterflies across the back."
+  },
+  {
+    "id": 28,
+    "title": "Zari Geometric Accent Belt",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "peacock",
+    "price": 599,
+    "image": "assets/images/products/img11.png",
+    "description": "Hand-finished waist accessory detailed with traditional geometric zari embroidery."
+  },
+  {
+    "id": 29,
+    "title": "Trailing Vine Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "leaves",
+    "price": 2599,
+    "image": "assets/images/products/img12.png",
+    "description": "Structured evening jacket with organic trailing vine threadwork down the lapel."
+  },
+  {
+    "id": 30,
+    "title": "Initial Monogram Men's Polo",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "custom",
+    "price": 1299,
+    "image": "assets/images/products/img13.png",
+    "description": "Comfortable cotton blend polo personalised with custom monogram chest stitching."
+  },
+  {
+    "id": 31,
+    "title": "Rose Vine Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "floral",
+    "price": 1399,
+    "image": "assets/images/products/img14.png",
+    "description": "Exquisite blouse featuring twisting rose vine patterns along the elbow-length sleeves."
+  },
+  {
+    "id": 32,
+    "title": "Botanical Kids Playsuit",
+    "category": "children",
+    "garment": "shirt",
+    "motif": "leaves",
+    "price": 899,
+    "image": "assets/images/products/img15.png",
+    "description": "Cute organic cotton playsuit decorated with small leaf sprig embroideries."
+  },
+  {
+    "id": 33,
+    "title": "Peacock Feather Silk Stole",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "peacock",
+    "price": 999,
+    "image": "assets/images/products/img16.png",
+    "description": "Rich silk stole featuring detailed peacock eye embroidery at both ends."
+  },
+  {
+    "id": 34,
+    "title": "Geometric Zari Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "peacock",
+    "price": 1999,
+    "image": "assets/images/products/img17.png",
+    "description": "Contemporary midi skirt accented with clean geometric zari border lines."
+  },
+  {
+    "id": 35,
+    "title": "Butterfly Flutter Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "butterflies",
+    "price": 1699,
+    "image": "assets/images/products/img1.png",
+    "description": "Light pastel kurti featuring a cluster of ascending butterflies near the hem."
+  },
+  {
+    "id": 36,
+    "title": "Classic Floral Men's Kurta",
+    "category": "men",
+    "garment": "kurti",
+    "motif": "floral",
+    "price": 1899,
+    "image": "assets/images/products/img2.png",
+    "description": "Festive men's ethnic tunic with subtle floral embroidery framing the collar."
+  },
+  {
+    "id": 37,
+    "title": "Monogram Cosmetic Pouch",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "custom",
+    "price": 649,
+    "image": "assets/images/products/img3.png",
+    "description": "Handmade fabric pouch finished with elegant custom monogram embroidery."
+  },
+  {
+    "id": 38,
+    "title": "Spring Blossom Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "floral",
+    "price": 2699,
+    "image": "assets/images/products/img4.png",
+    "description": "Chic open-front jacket densely packed with spring blossom needlework."
+  },
+  {
+    "id": 39,
+    "title": "Leafy Meadow Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "leaves",
+    "price": 3399,
+    "image": "assets/images/products/img5.png",
+    "description": "Breathtaking green and gold lehenga skirt patterned with lush leafy canopy weaves."
+  },
+  {
+    "id": 40,
+    "title": "Kids Monogram Sun Hat",
+    "category": "children",
+    "garment": "accessory",
+    "motif": "custom",
+    "price": 499,
+    "image": "assets/images/products/img6.png",
+    "description": "Adorable cotton sun hat personalized with the child's initials."
+  },
+  {
+    "id": 41,
+    "title": "Botanical Silk Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "leaves",
+    "price": 1499,
+    "image": "assets/images/products/img7.png",
+    "description": "Tailored silk blouse showcasing delicate fern and leaf embroidery."
+  },
+  {
+    "id": 42,
+    "title": "Whimsical Butterfly Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "butterflies",
+    "price": 1599,
+    "image": "assets/images/products/img8.png",
+    "description": "Creative designer men's shirt featuring artfully scattered embroidered butterflies."
+  },
+  {
+    "id": 43,
+    "title": "Royal Peacock Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "peacock",
+    "price": 1899,
+    "image": "assets/images/products/img9.png",
+    "description": "Regal kurti featuring intricate peacock feather motifs along the yoke."
+  },
+  {
+    "id": 44,
+    "title": "Geometric Zari Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "peacock",
+    "price": 1399,
+    "image": "assets/images/products/img10.png",
+    "description": "Classic sari blouse structured with gleaming geometric zari borders."
+  },
+  {
+    "id": 45,
+    "title": "Floral Heritage Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "floral",
+    "price": 2299,
+    "image": "assets/images/products/img11.png",
+    "description": "Tiered heritage skirt handcrafted with traditional floral motifs in silk thread."
+  },
+  {
+    "id": 46,
+    "title": "Custom Monogram Silk Scarf",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "custom",
+    "price": 899,
+    "image": "assets/images/products/img12.png",
+    "description": "Soft pure silk neck scarf embroidered with a subtle personal monogram corner crest."
+  },
+  {
+    "id": 47,
+    "title": "Trailing Vine Kids Kurta",
+    "category": "children",
+    "garment": "kurti",
+    "motif": "leaves",
+    "price": 1199,
+    "image": "assets/images/products/img13.png",
+    "description": "Comfortable children's festive kurta styled with cute green vine embroidery."
+  },
+  {
+    "id": 48,
+    "title": "Butterfly Garden Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "butterflies",
+    "price": 3599,
+    "image": "assets/images/products/img14.png",
+    "description": "Whimsical celebration lehenga featuring floating butterflies amidst tiny flower sprigs."
+  },
+  {
+    "id": 49,
+    "title": "Minimalist Floral Men's Tee",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "floral",
+    "price": 1099,
+    "image": "assets/images/products/img15.png",
+    "description": "Casual crewneck tee featuring a single embroidered rose bloom on the chest."
+  },
+  {
+    "id": 50,
+    "title": "Botanical Leaf Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "leaves",
+    "price": 2499,
+    "image": "assets/images/products/img16.png",
+    "description": "Earthy tone statement jacket completely lined with embroidered leaf patterns."
+  },
+  {
+    "id": 51,
+    "title": "Classic Floral Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "floral",
+    "price": 1299,
+    "image": "assets/images/products/img17.png",
+    "description": "Timeless sari blouse accented with delicate floral vine embroidery on the cuffs."
+  },
+  {
+    "id": 52,
+    "title": "Royal Peacock Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "peacock",
+    "price": 3899,
+    "image": "assets/images/products/img1.png",
+    "description": "Regal wedding lehenga intricately worked with grand peacock motifs and zari thread."
+  },
+  {
+    "id": 53,
+    "title": "Whimsical Butterfly Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "butterflies",
+    "price": 1999,
+    "image": "assets/images/products/img2.png",
+    "description": "Playful tiered skirt with scattered butterfly embroidery catching the light."
+  },
+  {
+    "id": 54,
+    "title": "Custom Initials Pocket Tee",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "custom",
+    "price": 1199,
+    "image": "assets/images/products/img3.png",
+    "description": "Everyday casual tee featuring custom stitched initials on the breast pocket."
+  },
+  {
+    "id": 55,
+    "title": "Kids Floral Denim Skirt",
+    "category": "children",
+    "garment": "skirt",
+    "motif": "floral",
+    "price": 999,
+    "image": "assets/images/products/img4.png",
+    "description": "Adorable children's denim skirt accented with colorful hand-stitched floral patches."
+  },
+  {
+    "id": 56,
+    "title": "Geometric Zari Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "peacock",
+    "price": 1799,
+    "image": "assets/images/products/img5.png",
+    "description": "Sleek straight-cut kurti highlighted with geometric zari thread geometry."
+  },
+  {
+    "id": 57,
+    "title": "Trailing Vine Men's Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "leaves",
+    "price": 1599,
+    "image": "assets/images/products/img6.png",
+    "description": "Unique men's button-down showcasing trailing vine embroidery across the shoulder."
+  },
+  {
+    "id": 58,
+    "title": "Embroidered Canvas Tote",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "floral",
+    "price": 799,
+    "image": "assets/images/products/img7.png",
+    "description": "Durable daily canvas tote bag featuring an oversized hand-stitched floral bloom."
+  },
+  {
+    "id": 59,
+    "title": "Rose Bloom Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "floral",
+    "price": 1499,
+    "image": "assets/images/products/img8.png",
+    "description": "Stunning sari blouse featuring dense rose motif embroidery on the back panel."
+  },
+  {
+    "id": 60,
+    "title": "Botanical Kids Cotton Shirt",
+    "category": "children",
+    "garment": "shirt",
+    "motif": "leaves",
+    "price": 899,
+    "image": "assets/images/products/img9.png",
+    "description": "Breathable cotton shirt for kids with cute leaf prints and embroidery."
+  },
+  {
+    "id": 61,
+    "title": "Butterfly Silk Stole",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "butterflies",
+    "price": 999,
+    "image": "assets/images/products/img10.png",
+    "description": "Delicate silk stole scattered with embroidered fluttering butterflies."
+  },
+  {
+    "id": 62,
+    "title": "Custom Monogram Jacket",
+    "category": "men",
+    "garment": "jacket",
+    "motif": "custom",
+    "price": 2999,
+    "image": "assets/images/products/img11.png",
+    "description": "Bespoke men's tailored jacket featuring personalized monogram chest embroidery."
+  },
+  {
+    "id": 63,
+    "title": "Spring Meadow Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "floral",
+    "price": 1699,
+    "image": "assets/images/products/img12.png",
+    "description": "Lightweight cotton kurti embroidered with a charming spring meadow motif."
+  },
+  {
+    "id": 64,
+    "title": "Royal Peacock Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "peacock",
+    "price": 2899,
+    "image": "assets/images/products/img13.png",
+    "description": "Statement embroidered jacket featuring majestic peacock design elements."
+  },
+  {
+    "id": 65,
+    "title": "Geometric Zari Stole",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "peacock",
+    "price": 899,
+    "image": "assets/images/products/img14.png",
+    "description": "Elegant evening stole finished with traditional geometric zari weave borders."
+  },
+  {
+    "id": 66,
+    "title": "Leafy Vine Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "leaves",
+    "price": 2099,
+    "image": "assets/images/products/img15.png",
+    "description": "Boho-chic wrap skirt detailed with cascading leafy vine needlework."
+  },
+  {
+    "id": 67,
+    "title": "Kids Butterfly Kurti Set",
+    "category": "children",
+    "garment": "kurti",
+    "motif": "butterflies",
+    "price": 1299,
+    "image": "assets/images/products/img16.png",
+    "description": "Delightful children's festive set featuring charming butterfly embroidery."
+  },
+  {
+    "id": 68,
+    "title": "Classic Floral Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "floral",
+    "price": 3499,
+    "image": "assets/images/products/img17.png",
+    "description": "Stunning celebratory lehenga skirt embroidered with timeless floral bouquets."
+  },
+  {
+    "id": 69,
+    "title": "Custom Initials Men's Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "custom",
+    "price": 1499,
+    "image": "assets/images/products/img1.png",
+    "description": "Crisp tailored men's shirt customized with elegant personal monogram initials."
+  },
+  {
+    "id": 70,
+    "title": "Botanical Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "leaves",
+    "price": 1399,
+    "image": "assets/images/products/img2.png",
+    "description": "Sari blouse featuring organic fern and leaf embroidery along the neckline."
+  },
+  {
+    "id": 71,
+    "title": "Whimsical Butterfly Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "butterflies",
+    "price": 2599,
+    "image": "assets/images/products/img3.png",
+    "description": "Layering jacket accented with playful embroidered butterflies across the back."
+  },
+  {
+    "id": 72,
+    "title": "Royal Peacock Men's Kurta",
+    "category": "men",
+    "garment": "kurti",
+    "motif": "peacock",
+    "price": 2099,
+    "image": "assets/images/products/img4.png",
+    "description": "Grand festive men's kurta detailed with rich peacock feather embroidery."
+  },
+  {
+    "id": 73,
+    "title": "Minimalist Floral Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "floral",
+    "price": 1799,
+    "image": "assets/images/products/img5.png",
+    "description": "Simple elegant skirt accented with a delicate single row of floral embroidery."
+  },
+  {
+    "id": 74,
+    "title": "Custom Monogram Wallet",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "custom",
+    "price": 599,
+    "image": "assets/images/products/img6.png",
+    "description": "Handcrafted fabric clutch wallet personalized with custom monogram embroidery."
+  },
+  {
+    "id": 75,
+    "title": "Trailing Vine Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "leaves",
+    "price": 1599,
+    "image": "assets/images/products/img7.png",
+    "description": "Graceful kurti featuring organic trailing vine patterns along the front panel."
+  },
+  {
+    "id": 76,
+    "title": "Kids Monogram Backpack",
+    "category": "children",
+    "garment": "accessory",
+    "motif": "custom",
+    "price": 1199,
+    "image": "assets/images/products/img8.png",
+    "description": "Durable mini backpack for kids customized with their initials."
+  },
+  {
+    "id": 77,
+    "title": "Geometric Zari Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "peacock",
+    "price": 3699,
+    "image": "assets/images/products/img9.png",
+    "description": "Modern festive lehenga featuring striking geometric zari thread patterns."
+  },
+  {
+    "id": 78,
+    "title": "Rose Bloom Men's Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "floral",
+    "price": 1599,
+    "image": "assets/images/products/img10.png",
+    "description": "Designer men's shirt featuring subtle rose bloom embroidery on the collar."
+  },
+  {
+    "id": 79,
+    "title": "Butterfly Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "butterflies",
+    "price": 1399,
+    "image": "assets/images/products/img11.png",
+    "description": "Charming sari blouse detailed with embroidered butterflies on the sleeves."
+  },
+  {
+    "id": 80,
+    "title": "Botanical Men's Kurta",
+    "category": "men",
+    "garment": "kurti",
+    "motif": "leaves",
+    "price": 1899,
+    "image": "assets/images/products/img12.png",
+    "description": "Earthy ethnic kurta for men featuring organic leaf sprig embroidery."
+  },
+  {
+    "id": 81,
+    "title": "Classic Floral Accent Scarf",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "floral",
+    "price": 799,
+    "image": "assets/images/products/img13.png",
+    "description": "Lightweight accent scarf finished with hand-stitched floral corners."
+  },
+  {
+    "id": 82,
+    "title": "Royal Peacock Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "peacock",
+    "price": 1599,
+    "image": "assets/images/products/img14.png",
+    "description": "Exquisite blouse featuring ornate peacock feather embroidery across the back."
+  },
+  {
+    "id": 83,
+    "title": "Kids Botanical Romper",
+    "category": "children",
+    "garment": "shirt",
+    "motif": "leaves",
+    "price": 899,
+    "image": "assets/images/products/img15.png",
+    "description": "Sweet baby romper embroidered with cute little leaf motifs."
+  },
+  {
+    "id": 84,
+    "title": "Trailing Vine Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "leaves",
+    "price": 2199,
+    "image": "assets/images/products/img16.png",
+    "description": "Flowing maxi skirt styled with delicate cascading vine needlework."
+  },
+  {
+    "id": 85,
+    "title": "Custom Initials Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "custom",
+    "price": 2799,
+    "image": "assets/images/products/img17.png",
+    "description": "Tailored jacket customized with personal initials embroidered on the lapel."
+  },
+  {
+    "id": 86,
+    "title": "Whimsical Butterfly Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "butterflies",
+    "price": 3499,
+    "image": "assets/images/products/img1.png",
+    "description": "Enchanting lehenga skirt featuring whimsical butterfly embroidery throughout."
+  },
+  {
+    "id": 87,
+    "title": "Geometric Zari Men's Shirt",
+    "category": "men",
+    "garment": "shirt",
+    "motif": "peacock",
+    "price": 1699,
+    "image": "assets/images/products/img2.png",
+    "description": "Contemporary men's shirt accented with clean geometric zari line embroidery."
+  },
+  {
+    "id": 88,
+    "title": "Spring Blossom Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "floral",
+    "price": 1799,
+    "image": "assets/images/products/img3.png",
+    "description": "Bright spring kurti covered in cheerful hand-stitched floral embroidery."
+  },
+  {
+    "id": 89,
+    "title": "Embroidered Fabric Headband",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "floral",
+    "price": 399,
+    "image": "assets/images/products/img4.png",
+    "description": "Charming hair accessory embroidered with tiny floral blossom patterns."
+  },
+  {
+    "id": 90,
+    "title": "Botanical Leaf Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "leaves",
+    "price": 1399,
+    "image": "assets/images/products/img5.png",
+    "description": "Sari blouse featuring elegant fern and leaf branch embroidery."
+  },
+  {
+    "id": 91,
+    "title": "Kids Floral Sun Hat",
+    "category": "children",
+    "garment": "accessory",
+    "motif": "floral",
+    "price": 499,
+    "image": "assets/images/products/img6.png",
+    "description": "Playful cotton sun hat embroidered with colorful spring flowers."
+  },
+  {
+    "id": 92,
+    "title": "Royal Peacock Skirt",
+    "category": "women",
+    "garment": "skirt",
+    "motif": "peacock",
+    "price": 2599,
+    "image": "assets/images/products/img7.png",
+    "description": "Statement skirt featuring majestic peacock feather embroidery panels."
+  },
+  {
+    "id": 93,
+    "title": "Custom Monogram Men's Kurta",
+    "category": "men",
+    "garment": "kurti",
+    "motif": "custom",
+    "price": 1999,
+    "image": "assets/images/products/img8.png",
+    "description": "Traditional men's kurta personalized with a subtle monogram chest crest."
+  },
+  {
+    "id": 94,
+    "title": "Butterfly Garden Kurti",
+    "category": "women",
+    "garment": "kurti",
+    "motif": "butterflies",
+    "price": 1699,
+    "image": "assets/images/products/img9.png",
+    "description": "Charming everyday kurti featuring lovely flying butterfly embroidery."
+  },
+  {
+    "id": 95,
+    "title": "Geometric Zari Jacket",
+    "category": "women",
+    "garment": "jacket",
+    "motif": "peacock",
+    "price": 2899,
+    "image": "assets/images/products/img10.png",
+    "description": "Modern structured jacket detailed with striking geometric zari embroidery."
+  },
+  {
+    "id": 96,
+    "title": "Trailing Vine Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "leaves",
+    "price": 1499,
+    "image": "assets/images/products/img11.png",
+    "description": "Sophisticated sari blouse featuring delicate cascading vine patterns."
+  },
+  {
+    "id": 97,
+    "title": "Classic Floral Kids Dress",
+    "category": "children",
+    "garment": "skirt",
+    "motif": "floral",
+    "price": 1199,
+    "image": "assets/images/products/img12.png",
+    "description": "Beautiful children's occasion dress hand-embroidered with spring blossoms."
+  },
+  {
+    "id": 98,
+    "title": "Custom Initials Sari Blouse",
+    "category": "women",
+    "garment": "blouse",
+    "motif": "custom",
+    "price": 1599,
+    "image": "assets/images/products/img13.png",
+    "description": "Personalized sari blouse featuring custom initial embroidery on the wrist cuff."
+  },
+  {
+    "id": 99,
+    "title": "Botanical Silk Scarf",
+    "category": "accessories",
+    "garment": "accessory",
+    "motif": "leaves",
+    "price": 899,
+    "image": "assets/images/products/img14.png",
+    "description": "Pure silk scarf accented with delicate hand-stitched leaf motifs."
+  },
+  {
+    "id": 100,
+    "title": "Signature Masterpiece Lehenga",
+    "category": "women",
+    "garment": "lehenga",
+    "motif": "floral",
+    "price": 4299,
+    "image": "assets/images/products/img15.png",
+    "description": "The pinnacle of our atelier collection: a breathtaking bridal lehenga featuring dense, multi-motif hand embroidery."
+  }
+]
